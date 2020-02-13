@@ -15,7 +15,6 @@
       }
       </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
       function randomString(string_length)
       {
@@ -46,7 +45,7 @@
               if ($(this).width() == 161 && $(this).height() == 81)
                   $(this).css({'display':'none'});
               });
-          if (counter > 100)
+          if (counter > 1)
               {
               clearInterval(timer);
               counter = 0;
@@ -55,11 +54,11 @@
       function init()
         {
         $content = $('#content');
-        timer = setInterval(render,1);
+        timer = setInterval(render,20);
 
         $('#more').click(function(){
             if (counter == 0)
-                timer = setInterval(render,1);
+                timer = setInterval(render,20);
             return false;
           });
         }
